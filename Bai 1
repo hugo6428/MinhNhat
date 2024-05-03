@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void findNum(int start, int end) {
+    for (int i = start; i <= end; i++)
+    {
+        if (i % 7 == 0)
+            printf("%5d", i);
+    }
+}
+
+
+int main(void) {
+    // Your code here!
+    int start = 10, end = 99;
+    printf("So co 2 chu so va la boi cua 7 la: ");
+    findNum(start, end);
+}
