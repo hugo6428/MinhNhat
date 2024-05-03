@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int is_ChinhPhuong(int num)
+{
+    int temp = sqrt(num);
+    return (temp * temp == num);
+}
+
+void ChinhPhuong(int n) {
+    int count = 0;
+    for (int i = 1; i < n; i++)
+    {
+        if (is_ChinhPhuong(i))
+        {
+            printf("%5d", i);
+            count++;
+        }
+    }
+    printf("\nCo %d so chinh phuong!", count);
+}
+
+
+int main(void) {
+    // Your code here!
+    int n;
+    do
+    {
+        printf("\nNhap n:");
+        scanf_s("%d", &n);
+        if (n < 0)
+            printf("\nSo n phai la so duong");
+    } while (n<0);
+    printf("\nCac so chinh phuong be hon N la: ");
+    ChinhPhuong(n);
+}
